@@ -11,8 +11,6 @@ export default class Items extends Component {
                         return <Item key={index} allInfo={allInfo}/>
                     })}
                 </ul>
-
-                {/* <Item allInfo={this.props.allInfo} /> */}
             </div>
         )
     }
