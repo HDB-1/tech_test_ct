@@ -1,3 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`shallow Item should render correctly 1`] = `undefined`;
+exports[`shallow Item should render correctly 1`] = `
+<div>
+  <p>
+    showing iitem component
+  </p>
+  <ul>
+    <li
+      key="0"
+    >
+      Name = 
+      Covalent Capped With Fee
+    </li>
+    <li
+      key="1"
+    >
+      Name = 
+      Covalent Fixed Six Months
+    </li>
+  </ul>
+</div>
+`;
