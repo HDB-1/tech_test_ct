@@ -1,12 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`shallow Item should render correctly 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "border": "2px solid black",
+      "margin": "5px",
+    }
+  }
+>
   <p>
-    name = 
+    Name: 
   </p>
   <p>
-    cost = 
+    Monthly Expected Cost: £
+  </p>
+  <p>
+    Expected Annual Saving: £
   </p>
 </div>
 `;

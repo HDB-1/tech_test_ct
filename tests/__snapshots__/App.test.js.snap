@@ -18,7 +18,7 @@ exports[`shallow app should render correctly 1`] = `
       exact={true}
       path="/info"
     >
-      Sorry there was a problem getting the data!
+      Sorry we are just collecting the data for you... please wait.
     </Route>
   </Switch>
 </BrowserRouter>

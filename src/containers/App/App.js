@@ -44,7 +44,7 @@ class App extends React.Component {
             <p>Welcome to the App</p>
           </Route>
           <Route exact path="/info">
-          {this.state.fetched ? <Overview info={this.state.data}/> : 'Sorry there was a problem getting the data!'} 
+          {this.state.fetched ? <Overview info={this.state.data}/> : 'Sorry we are just collecting the data for you... please wait.'} 
           </Route>
         </Switch>
       </Router>

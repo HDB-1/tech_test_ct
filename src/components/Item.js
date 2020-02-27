@@ -1,10 +1,15 @@
 import React from 'react'
 
 export default function Item(props) {
+    const itemComp = {
+        border: '2px solid black',
+        margin: '5px'
+    }
     return (
-        <div>
-            <p>name = {props.allInfo.name}</p>
-            <p>cost = {props.allInfo.expectedAnnualSpend}</p>
+        <div style={itemComp}>
+            <p>Name: {props.allInfo.name}</p>
+            <p>Monthly Expected Cost: £{props.allInfo.expectedMonthlySpend}</p>
+            <p>Expected Annual Saving: £{props.allInfo.expectedAnnualSavings}</p>
         </div>
     )
 }
