@@ -5,6 +5,60 @@ exports[`shallow Items should render correctly 1`] = `
   <p>
     showing items component
   </p>
-  <Item />
+  <ul>
+    <Item
+      allInfo={
+        Object {
+          "canApply": true,
+          "expectedAnnualSavings": 112,
+          "expectedAnnualSpend": "469.67",
+          "expectedMonthlySpend": "39.14",
+          "hasExitFees": true,
+          "hasPaperBilling": true,
+          "id": "tariffSelectionE716598",
+          "isBigSix": false,
+          "logoUri": "https://rest.staging.energyhelpline.com/Uploads/SupplierLogos/Woodland_TRANS.gif?t=QtT9F_RfNGiloVcwLpCkGELowyI",
+          "messages": Array [
+            "Early exit fee: £30.00",
+          ],
+          "name": "Covalent Capped With Fee",
+          "paymentMethod": "Monthly Direct Debit",
+          "supplierId": "136",
+          "supplierName": "Covalent Energy",
+          "supplyDetailsId": "1795",
+          "tags": Array [],
+          "tariffType": "unknown",
+        }
+      }
+      key="0"
+    />
+    <Item
+      allInfo={
+        Object {
+          "canApply": true,
+          "expectedAnnualSavings": 112,
+          "expectedAnnualSpend": "469.67",
+          "expectedMonthlySpend": "39.14",
+          "hasExitFees": false,
+          "hasPaperBilling": true,
+          "id": "tariffSelectionE716668",
+          "isBigSix": false,
+          "logoUri": "https://rest.staging.energyhelpline.com/Uploads/SupplierLogos/Woodland_TRANS.gif?t=QtT9F_RfNGiloVcwLpCkGELowyI",
+          "messages": Array [
+            "No early exit fees",
+            "Fixed until 26 February 2017",
+          ],
+          "name": "Covalent Fixed Six Months",
+          "paymentMethod": "Monthly Direct Debit",
+          "supplierId": "136",
+          "supplierName": "Covalent Energy",
+          "supplyDetailsId": "1796",
+          "tags": Array [],
+          "tariffType": "fixed",
+        }
+      }
+      key="1"
+    />
+  </ul>
 </div>
 `;
