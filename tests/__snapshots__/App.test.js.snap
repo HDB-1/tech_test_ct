@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shallow app should render correctly 1`] = `
+<BrowserRouter
+  className="App"
+>
+  <NavBar />
+  <Switch>
+    <Route
+      exact={true}
+      path="/"
+    >
+      <p>
+        Welcome to the App
+      </p>
+    </Route>
+    <Route
+      exact={true}
+      path="/info"
+    >
+      Sorry there was a problem getting the data!
+    </Route>
+  </Switch>
+</BrowserRouter>
+`;
