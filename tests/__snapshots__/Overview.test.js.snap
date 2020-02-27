@@ -1,3 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`shallow app should render correctly 1`] = `undefined`;
+exports[`shallow Overview should render correctly 1`] = `
+<div>
+  <p>
+    showing overview component
+  </p>
+  <Items />
+</div>
+`;

@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import Navbar from '../src/components/Navbar'
 
 
-describe("shallow app", () => {
+describe("shallow Navbar", () => {
     let wrapper;
     beforeEach(() => {
         wrapper = shallow(<Navbar />)

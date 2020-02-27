@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import Overview from '../src/components/Overview'
 
 
-describe("shallow app", () => {
+describe("shallow Overview", () => {
     let wrapper;
     beforeEach(() => {
         wrapper = shallow(<Overview />)

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shallow Items should render correctly 1`] = `
+<div>
+  <p>
+    showing items component
+  </p>
+  <Item />
+</div>
+`;

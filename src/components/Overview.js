@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react';
+import Items from './Items';
 
-
-export default function Overview(props) {
-    return (
-        <div>
-            <p>showing overview component</p>
-            <ul>
-                {props.info.map((information, index) => <li key={index}>Name: {information.name}</li>)}
-            </ul>
-        </div>
-    )
+export default class Overview extends Component {
+    render() {
+        return (
+            <div>
+                <p>showing overview component</p>
+                <Items allInfo={this.props.info} />
+            </div>
+        )
+    }
 }
-
