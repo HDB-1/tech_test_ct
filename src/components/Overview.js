@@ -6,7 +6,7 @@ export default class Overview extends Component {
         return (
             <div>
                 <p>showing overview component</p>
-                <Items allInfo={this.props.info} />
+                <Items allInfo={this.props.allState} showFixed={this.props.showFixed} showVariable={this.props.showVariable}/>
             </div>
         )
     }

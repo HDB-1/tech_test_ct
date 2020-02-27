@@ -10,6 +10,7 @@ export default function Item(props) {
             <p>Name: {props.allInfo.name}</p>
             <p>Monthly Expected Cost: £{props.allInfo.expectedMonthlySpend}</p>
             <p>Expected Annual Saving: £{props.allInfo.expectedAnnualSavings}</p>
+            {/* {props. ? "show fixed ones" : "no state for fixed yet"} */}
         </div>
     )
 }
