@@ -1,5 +1,7 @@
 ## Setup Instructions:
 
+(master branch for Comparison Technologies Technical Test, version2 branch evolves as of 27/02/2020)
+
 - cd tech_test_ct
 - npm install
 - npm start (to start server)
