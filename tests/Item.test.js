@@ -3,8 +3,14 @@ import { shallow } from 'enzyme';
 import Item from '../src/components/Item';
 
 describe("shallow Item", () => {
-    let wrapper;
-    let allInfo = [{
+    let wrapper
+    let showFixedMock = jest.fn() 
+    let showVariableMock = jest.fn()
+    let all = {
+        fixed: false,
+        variable: false
+    }
+    let energyData = [{
         id: "tariffSelectionE716598",
         supplyDetailsId: "1795",
         canApply: true,
@@ -49,7 +55,7 @@ describe("shallow Item", () => {
         }]
 
     beforeEach(() => {
-        wrapper = shallow(<Item allInfo={allInfo}/>)
+        wrapper = shallow(<Item energyData={energyData} showFixed={showFixedMock} showVariable={showVariableMock} all={all}/>)
     })
     it("should render correctly", () => {
         expect(wrapper).toMatchSnapshot();

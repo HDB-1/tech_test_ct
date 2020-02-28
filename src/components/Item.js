@@ -7,10 +7,11 @@ export default function Item(props) {
     }
     return (
         <div style={itemComp}>
-            <p>Name: {props.allInfo.name}</p>
-            <p>Monthly Expected Cost: £{props.allInfo.expectedMonthlySpend}</p>
-            <p>Expected Annual Saving: £{props.allInfo.expectedAnnualSavings}</p>
-            {/* {props. ? "show fixed ones" : "no state for fixed yet"} */}
+            <p>Name: {props.energyData.name}</p>
+            <p>Monthly Expected Cost: £{props.energyData.expectedMonthlySpend}</p>
+            <p>Expected Annual Saving: £{props.energyData.expectedAnnualSavings}</p>
+            {/* {props.all.fixed ? <p>Tariff Type: Fixeddd!!</p> : <p>nope didnt work for fix</p>}
+            {props.all.variable ? <p>Tariff Type: Variableee!!</p> : <p>nope didnt work for var</p>} */}
         </div>
     )
 }

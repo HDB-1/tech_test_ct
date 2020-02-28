@@ -5,57 +5,36 @@ import Item from '../src/components/Item';
 
 describe("shallow Items", () => {
     let wrapper;
-    let allInfo = [{
-        id: "tariffSelectionE716598",
-        supplyDetailsId: "1795",
-        canApply: true,
-        name: "Covalent Capped With Fee",
-        logoUri: "https://rest.staging.energyhelpline.com/Uploads/SupplierLogos/Woodland_TRANS.gif?t=QtT9F_RfNGiloVcwLpCkGELowyI",
-        expectedAnnualSavings: 112,
-        expectedAnnualSpend: "469.67",
-        expectedMonthlySpend: "39.14",
-        messages: [
-        "Early exit fee: £30.00"
-        ],
-        tags: [ ],
-        tariffType: "unknown",
-        paymentMethod: "Monthly Direct Debit",
-        supplierName: "Covalent Energy",
-        supplierId: "136",
-        isBigSix: false,
-        hasPaperBilling: true,
-        hasExitFees: true
-        },
-        {
-        id: "tariffSelectionE716668",
-        supplyDetailsId: "1796",
-        canApply: true,
-        name: "Covalent Fixed Six Months",
-        logoUri: "https://rest.staging.energyhelpline.com/Uploads/SupplierLogos/Woodland_TRANS.gif?t=QtT9F_RfNGiloVcwLpCkGELowyI",
-        expectedAnnualSavings: 112,
-        expectedAnnualSpend: "469.67",
-        expectedMonthlySpend: "39.14",
-        messages: [
-        "No early exit fees",
-        "Fixed until 26 February 2017"
-        ],
-        tags: [ ],
-        tariffType: "fixed",
-        paymentMethod: "Monthly Direct Debit",
-        supplierName: "Covalent Energy",
-        supplierId: "136",
-        isBigSix: false,
-        hasPaperBilling: true,
-        hasExitFees: false
-        }]
+    let showFixedMock = jest.fn()
+    let showVariableMock = jest.fn()
+    let allState = {
+        data: [],
+        fetched: false,
+        fixed: false,
+        variable: false
+      }
 
     beforeEach(() => {
-        wrapper = shallow(<Items allInfo={allInfo}/>)
+        wrapper = shallow(<Items allState={allState} showFixed={showFixedMock} showVariable={showVariableMock}/>)
     })
     it("should render correctly", () => {
         expect(wrapper).toMatchSnapshot();
     })
-    it("should contain an Item component", () => {
-        expect(wrapper.containsMatchingElement(<Item />)).toEqual(true);
+    // it("should contain an Item component", () => {
+    //     expect(wrapper.containsMatchingElement(<Item energyData={allState.data} fixed={allState.fixed} variable={allState.variable}/>)).toEqual(true);
+    //     expect(wrapper.find(Item).length).toEqual(1);
+    // })
+    it('Should render show fixed and show prev buttons',()=>{
+        expect(wrapper.find('button').length).toEqual(2)
+        expect(wrapper.find('#fixedBtn').length).toEqual(1)
+        expect(wrapper.find('#varBtn').length).toEqual(1)
     })
+    it('show fixed button should call show fixed function', () => {
+        wrapper.find('#fixedBtn').simulate('click')
+        expect(showFixedMock).toHaveBeenCalled()
+    });
+    it('Next button should call next function', () => {
+        wrapper.find('#varBtn').simulate('click')
+        expect(showVariableMock).toHaveBeenCalled()
+    });
 })

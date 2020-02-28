@@ -1,3 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`shallow Items should render correctly 1`] = `undefined`;
+exports[`shallow Items should render correctly 1`] = `
+<div>
+  <p>
+    showing items component
+  </p>
+  <button
+    id="fixedBtn"
+    onClick={[MockFunction]}
+  >
+    Show Fixed
+  </button>
+  <button
+    id="varBtn"
+    onClick={[MockFunction]}
+  >
+    Show Variable
+  </button>
+  <ul />
+</div>
+`;
